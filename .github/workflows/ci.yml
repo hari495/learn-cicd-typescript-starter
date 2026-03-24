@@ -20,9 +20,6 @@ jobs:
 
       - name: initialize
         run: npm ci
-
-      - name: install dependencies
-        run: npm install
       
       - name: run tests
         run: npm test

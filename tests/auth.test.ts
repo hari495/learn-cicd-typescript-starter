@@ -19,6 +19,6 @@ describe("getAPIKey", () => {
 
   it("works when Authorization header is an array (takes first element)", () => {
     const headers: any = { authorization: ["ApiKey arrayKey", "ApiKey other"] };
-    expect(getAPIKey(headers)).toBe("rrayKey");
+    expect(getAPIKey(headers)).toBe("arrayKey");
   });
 });
