@@ -18,6 +18,11 @@ jobs:
         with:
           node-version: 22
 
-      - name: Install dependencies
+      - name: initialize
         run: npm ci
-        run: npm run test
+
+      - name: install dependencies
+        run: npm install
+      
+      - name: run tests
+        run: npm test
