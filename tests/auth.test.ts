@@ -19,7 +19,9 @@ describe("getAPIKey", () => {
   });
 
   it("works when Authorization header is an array (takes first element)", () => {
-    const headers: IncomingHttpHeaders = { authorization: ["ApiKey arrayKey", "ApiKey other"] };
+    const headers: IncomingHttpHeaders = {
+      authorization: ["ApiKey arrayKey", "ApiKey other"],
+    };
     expect(getAPIKey(headers)).toBe("arrayKey");
-    });
+  });
 });

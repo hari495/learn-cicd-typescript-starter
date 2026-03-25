@@ -26,7 +26,9 @@ describe("getAPIKey", () => {
 
   test("returns the first element when authorization is an array", () => {
     expect(
-      getAPIKey({ authorization: ["ApiKey arraykey", "ApiKey other"] as string[] }),
+      getAPIKey({
+        authorization: ["ApiKey arraykey", "ApiKey other"] as string[],
+      }),
     ).toBe("arraykey");
   });
 
