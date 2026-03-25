@@ -20,6 +20,9 @@ jobs:
 
       - name: initialize
         run: npm ci
-      
+
       - name: run tests
         run: npm run test -- --coverage
+
+      - name: format code
+        run: npm run format:check
