@@ -26,11 +26,13 @@ describe("getAPIKey", () => {
 
   test("returns the first element when authorization is an array", () => {
     expect(
-      getAPIKey({ authorization: ["ApiKey arraykey", "ApiKey other"] }),
+      getAPIKey({
+        authorization: ["ApiKey arraykey", "ApiKey other"] as string[],
+      }),
     ).toBe("arraykey");
   });
 
   test("returns null when authorization array is empty", () => {
-    expect(getAPIKey({ authorization: [] })).toBeNull();
+    expect(getAPIKey({ authorization: [] as string[] })).toBeNull();
   });
 });
