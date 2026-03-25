@@ -4,20 +4,21 @@ on:
     branches: [main]
 
 jobs:
-  name: Deploy
-  runs-on: ubuntu-latest
+  Deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
 
-  steps:
-    - name: check out code
-      uses: actions/checkout@v4
+    steps:
+      - name: check out code
+        uses: actions/checkout@v4
 
-    - name: set up node
-      uses: actions/setup-node@v4
-      with:
-        node-version: 22
+      - name: set up node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
 
-    - name: initialize
-      run: npm ci
+      - name: initialize
+        run: npm ci
 
-    - name: build
-      run: npm run build
+      - name: build
+        run: npm run build
