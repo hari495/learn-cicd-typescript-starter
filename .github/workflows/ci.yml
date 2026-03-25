@@ -25,5 +25,9 @@ jobs:
         run: npm run test -- --coverage
 
   format:
-    - name: format code
-      run: npm run format:check
+    name: Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: format code
+        run: npm run format:check
