@@ -41,5 +41,5 @@ jobs:
         run: npm ci
       - name: format code
         run: npm run format:check
-      - name: lint code
-        run: npm run lint
+      - name: check linting
+        run: npm run lint -- --max-warnings=0
